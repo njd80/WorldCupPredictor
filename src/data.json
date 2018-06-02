@@ -1,0 +1,170 @@
+{
+  "A":{
+    "name":"Group A",
+    "teams": {
+      "1": {
+        "name":"Russia",
+        "short_name":"rus"
+      },
+      "2": {
+        "name":"Saudi Arabia",
+        "short_name":"ksa"
+      },
+      "3": {
+        "name":"Egypt",
+        "short_name":"egy"
+      },
+      "4": {
+        "name":"Uruguay",
+        "short_name":"uru"
+      }
+    }
+  },
+  "B":{
+    "name":"Group B",
+    "teams": {
+      "1": {
+        "name":"Portugal",
+        "short_name":"por"
+      },
+      "2": {
+        "name":"Spain",
+        "short_name":"spa"
+      },
+      "3": {
+        "name":"Morocco",
+        "short_name":"mor"
+      },
+      "4": {
+        "name":"Iran",
+        "short_name":"irn"
+      }
+    }
+  },
+  "C":{
+    "name":"Group C",
+    "teams": {
+      "1": {
+        "name":"France",
+        "short_name":"fra"
+      },
+      "2": {
+        "name":"Australia",
+        "short_name":"aus"
+      },
+      "3": {
+        "name":"Peru",
+        "short_name":"per"
+      },
+      "4": {
+        "name":"Denmark",
+        "short_name":"den"
+      }
+    }
+  },
+  "D":{
+    "name":"Group D",
+    "teams": {
+      "1": {
+        "name":"Argentina",
+        "short_name":"arg"
+      },
+      "2": {
+        "name":"Iceland",
+        "short_name":"ice"
+      },
+      "3": {
+        "name":"Croatia",
+        "short_name":"cro"
+      },
+      "4": {
+        "name":"Nigeria",
+        "short_name":"nga"
+      }
+    }
+  },
+  "E":{
+    "name":"Group E",
+    "teams": {
+      "1": {
+        "name":"Brazil",
+        "short_name":"bra"
+      },
+      "2": {
+        "name":"Switzerland",
+        "short_name":"swi"
+      },
+      "3": {
+        "name":"Costa Rica",
+        "short_name":"crc"
+      },
+      "4": {
+        "name":"Serbia",
+        "short_name":"ser"
+      }
+    }
+  },
+  "F":{
+    "name":"Group F",
+    "teams": {
+      "1": {
+        "name":"Germany",
+        "short_name":"ger"
+      },
+      "2": {
+        "name":"Mexico",
+        "short_name":"mex"
+      },
+      "3": {
+        "name":"Sweden",
+        "short_name":"swe"
+      },
+      "4": {
+        "name":"South Korea",
+        "short_name":"kor"
+      }
+    }
+  },
+  "G":{
+    "name":"Group G",
+    "teams": {
+      "1": {
+        "name":"Belgium",
+        "short_name":"bel"
+      },
+      "2": {
+        "name":"Panama",
+        "short_name":"pan"
+      },
+      "3": {
+        "name":"Tunisia",
+        "short_name":"tun"
+      },
+      "4": {
+        "name":"England",
+        "short_name":"eng"
+      }
+    }
+  },
+  "H":{
+    "name":"Group H",
+    "teams": {
+      "1": {
+        "name":"Poland",
+        "short_name":"pol"
+      },
+      "2": {
+        "name":"Senegal",
+        "short_name":"sen"
+      },
+      "3": {
+        "name":"Columbia",
+        "short_name":"col"
+      },
+      "4": {
+        "name":"Japan",
+        "short_name":"jpn"
+      }
+    }
+  }
+}
