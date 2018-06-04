@@ -34,6 +34,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			json: {
+				files: ['src/*.json'],
+				tasks: ['copy:json'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 
@@ -55,7 +62,15 @@ module.exports = function(grunt) {
 			html: {
 				expand: true,
 				cwd: 'src/html',
-				src: '**',
+				src: '*.html',
+				dest: 'app/',
+				flatten: true,
+				filter: 'isFile'
+			},
+			json: {
+				expand: true,
+				cwd: 'src/',
+				src: '*.json',
 				dest: 'app/',
 				flatten: true,
 				filter: 'isFile'
