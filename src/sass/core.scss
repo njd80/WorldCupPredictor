@@ -18,16 +18,25 @@ p {
 
     p.name {
       font-weight: bold;
+      margin-bottom: 5px;
     }
 
     div.teams {
       p.team {
-        font-size: 0.9em;
-      }
-    }
-  }
+        margin: 5px 0;
 
-}
+        img.flag {
+          max-width: 32px;
+        }
+        span.team_name {
+          vertical-align: text-top;
+          font-size: 0.8em;
+        }
+      }
+    } // end div.teams
+  } // end .group
+
+} // end #mainContainer
 
 #log {
   position: absolute;

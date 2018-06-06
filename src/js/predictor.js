@@ -38,7 +38,12 @@ predictor = {
   renderTeams: function(group,teams) {
     var teamsContainer = $(this.dom.groups).filter('#'+group).find('.teams');
     $.each(teams, function(i, team) {
-      var template = '<img src="img/'+team.short_name+'.png"/><p class="team" id="'+i+'">'+team.name+'</p>';
+      var template = [
+        '<p class="team" id="'+i+'">',
+        ' <img class="flag" src="img/'+team.short_name+'.png"/>',
+        ' <span class="team_name">'+team.name+'</span>',
+        '</p>'
+      ].join("\n");
       teamsContainer.append(template);
     });
   },
