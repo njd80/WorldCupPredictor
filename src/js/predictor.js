@@ -12,7 +12,7 @@ predictor = {
 
   init: function() {
     var parent = this;
-    $.getJSON("data.json", function(d) {
+    $.getJSON("data/groups.json", function(d) {
 
       //temp display json
       $(parent.dom.log).html(JSON.stringify(d));

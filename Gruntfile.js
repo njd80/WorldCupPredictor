@@ -15,33 +15,40 @@ module.exports = function(grunt) {
 		//WATCH
 		watch: {
 			sass: {
-				files: ['src/sass/*.scss'],
+				files: ['src/sass/*'],
 				tasks: ['sass'],
 				options: {
 					livereload: true
 				}
 			},
 			js: {
-				files: ['src/js/*.js'],
+				files: ['src/js/*'],
 				tasks: ['jshint','uglify'],
 				options: {
 					livereload: true
 				}
 			},
 			html: {
-				files: ['src/html/*.html'],
+				files: ['src/html/*'],
 				tasks: ['copy:html'],
 				options: {
 					livereload: true
 				}
 			},
 			json: {
-				files: ['src/*.json'],
+				files: ['src/data/*'],
 				tasks: ['copy:json'],
 				options: {
 					livereload: true
 				}
-			}
+			},
+			img: {
+				files: ['src/img/*'],
+				tasks: ['copy:img'],
+				options: {
+					livereload: true
+				}
+			},
 		},
 
 		//CONNECT
@@ -69,9 +76,17 @@ module.exports = function(grunt) {
 			},
 			json: {
 				expand: true,
-				cwd: 'src/',
+				cwd: 'src/data',
 				src: '*.json',
-				dest: 'app/',
+				dest: 'app/data',
+				flatten: true,
+				filter: 'isFile'
+			},
+			img: {
+				expand: true,
+				cwd: 'src/img',
+				src: '*.png',
+				dest: 'app/img',
 				flatten: true,
 				filter: 'isFile'
 			}
