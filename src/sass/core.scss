@@ -8,8 +8,9 @@ p {
 
 #mainContainer {
 
-  .group {
+  div.group {
     display: inline-block;
+    vertical-align: top;
     min-width: 250px;
     padding: 10px;
     margin: 10px;
@@ -23,6 +24,8 @@ p {
     }
 
     div.teams {
+      margin-bottom: 10px;
+
       p.team {
         margin: 5px 0;
 
@@ -36,21 +39,46 @@ p {
       }
     } // end div.teams
 
-    p.fixturesLabel {
-      font-size: 0.9em;
-      font-weight: bold;
-    }
-
     div.fixtures {
 
-    }
+      p.fixturesLabel {
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-bottom: 5px;
+        cursor: pointer;
 
-  } // end .group
+        span.expandLabel {
+          display: inline;
+        }
+
+        span.contractLabel {
+          display: none;
+        }
+      }
+
+      p.fixture {
+        display: none;
+      }
+
+      &.open {
+
+        p.fixturesLabel {
+
+          span.expandLabel {
+            display: none;
+          }
+
+          span.contractLabel {
+            display: inline;
+          }
+        }
+
+        p.fixture {
+          display: block;
+        }
+      }
+    } // end div.fixtures
+
+  } // end div.group
 
 } // end #mainContainer
-
-#log {
-  position: absolute;
-  bottom: 0;
-  font-size: 0.8em;
-}

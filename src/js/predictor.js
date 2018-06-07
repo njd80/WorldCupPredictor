@@ -8,8 +8,14 @@ predictor = {
 
   events: {
     clickEvents: function() {
+      //Fixtures Label
       $('#mainContainer').on('click', '.fixturesLabel', function() {
-        console.log('fixturesLabel');
+        var fixtures = $(this).parent('.fixtures');
+        if (fixtures.data('open')) {
+          fixtures.removeClass('open').data('open',false);
+        } else {
+          fixtures.addClass('open').data('open',true);
+        }
 			});
     }
   },
@@ -35,10 +41,12 @@ predictor = {
       '<div class="group" id="'+index+'">',
       ' <p class="name">'+group.name+'</p>',
       ' <div class="teams"></div>',
-      ' <p class="fixturesLabel">Fixtures',
-      '   <span class="fixturesExpandLabel">+</span>',
-      ' </p>',
-      ' <div class="fixtures"></div>',
+      ' <div class="fixtures">',
+      '   <p class="fixturesLabel">Fixtures',
+      '     <span class="expandLabel">+</span>',
+      '     <span class="contractLabel">-</span>',
+      '   </p>',
+      ' </div>',
       '</div>'
     ].join("\n");
     $(this.dom.mainContainer).append(template);
@@ -68,12 +76,6 @@ predictor = {
       '<p class="fixture">'+teams['4'].name+'Vs'+teams['1'].name+'</p>'
     ].join("\n");
     fixturesContainer.append(template);
-    //1v2
-    //3v4
-    //1v3
-    //4v2
-    //2v3
-    //4v1
   }
 
 };
