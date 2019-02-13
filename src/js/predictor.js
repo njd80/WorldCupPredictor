@@ -58,7 +58,7 @@ predictor = {
       var template = [
         '<p class="team" id="'+i+'">',
         ' <img class="flag" src="img/'+team.short_name+'.png"/>',
-        ' <span class="team_name">'+team.name+'</span>',
+        ' <span class="team_name">'+team.short_name+'</span>',
         '</p>'
       ].join("\n");
       teamsContainer.append(template);
@@ -68,12 +68,12 @@ predictor = {
   renderFixtures: function(group,teams) {
     var fixturesContainer = $(this.dom.groups).filter('#'+group).find('.fixtures');
     var template = [
-      '<p class="fixture">'+teams['1'].name+'Vs'+teams['2'].name+'</p>',
-      '<p class="fixture">'+teams['3'].name+'Vs'+teams['4'].name+'</p>',
-      '<p class="fixture">'+teams['1'].name+'Vs'+teams['3'].name+'</p>',
-      '<p class="fixture">'+teams['4'].name+'Vs'+teams['2'].name+'</p>',
-      '<p class="fixture">'+teams['2'].name+'Vs'+teams['3'].name+'</p>',
-      '<p class="fixture">'+teams['4'].name+'Vs'+teams['1'].name+'</p>'
+      '<p class="fixture"><span class="'+teams['1'].short_name+'">'+teams['1'].name+'</span>Vs<span class="'+teams['2'].short_name+'">'+teams['2'].name+'</span></p>',
+      '<p class="fixture"><span class="'+teams['3'].short_name+'">'+teams['3'].name+'</span>Vs<span class="'+teams['4'].short_name+'">'+teams['4'].name+'</span></p>',
+      '<p class="fixture"><span class="'+teams['1'].short_name+'">'+teams['1'].name+'</span>Vs<span class="'+teams['3'].short_name+'">'+teams['3'].name+'</span></p>',
+      '<p class="fixture"><span class="'+teams['4'].short_name+'">'+teams['4'].name+'</span>Vs<span class="'+teams['2'].short_name+'">'+teams['2'].name+'</span></p>',
+      '<p class="fixture"><span class="'+teams['2'].short_name+'">'+teams['2'].name+'</span>Vs<span class="'+teams['3'].short_name+'">'+teams['3'].name+'</span></p>',
+      '<p class="fixture"><span class="'+teams['4'].short_name+'">'+teams['4'].name+'</span>Vs<span class="'+teams['1'].short_name+'">'+teams['1'].name+'</span></p>',
     ].join("\n");
     fixturesContainer.append(template);
   }
